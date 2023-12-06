@@ -9,6 +9,10 @@ import Home from './pages/Home/Home';
 import Login from './pages/Auth/Login';
 import Register from './pages/Auth/Register';
 
+// Componentes
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,11 +21,15 @@ function App() {
     <>
       <div>
         <BrowserRouter>
+        <Navbar />
+        <div className='container'>
           <Routes>
             <Route path='/' element={<Home />}/>
             <Route path='/login' element={<Login />}/>
             <Route path='/register' element={<Register />}/>
           </Routes>
+        </div>
+        <Footer />
         </BrowserRouter>
       </div>
     </>
