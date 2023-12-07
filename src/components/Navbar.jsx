@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <nav className={styles.nav}>
         <Link to='/'>ReactGram</Link>
-        <form>
+        <form className={styles.searchform}>
             <BsSearch/>
             <input type='text' placeholder='Pesquisar'/>
         </form>
